@@ -93,6 +93,68 @@ function superHero(){
     }  
 }
 
+function dice(){
+  var die1 = document.getElementById("die1");
+  var die2 = document.getElementById("die2");
+  var status = document.getElementById("status");
+  var d1 = Math.floor(Math.random() * 6) + 1;
+  var d2 = Math.floor(Math.random() * 6) + 1;
+  var diceTotal = d1 + d2;
+  die1.innerHTML = d1;
+  die2.innerHTML = d2;
+  status.innerHTML = "You rolled "+diceTotal+".";
+
+  if((diceTotal == 2) || (diceTotal == 3) || (diceTotal == 12)){
+      status.innerHTML = "CRAPS! You lose!";
+  }else if((diceTotal == 7) || (diceTotal == 11)){
+      status.innerHTML = "You won!";
+  }else {
+    status.innerHTML = "You can roll again, if you want."
+  }
+}
+
+//multi-dimensional array example
+function map(){
+  var input1 = document.getElementById("num1").value;
+  var input2 = document.getElementById("num2").value;  
+  var map1 = parseInt(input1)-1;
+  var map2 = parseInt(input2)-1;
+
+  function inputValidator(a,b){
+    a = map1;
+    b = map2;
+    if((a < 0 || a > 8) || (b < 0 || b > 8 )){
+      document.getElementById("mapOutput").innerHTML = "You have entered incorrect numbers."
+    }
+  }
+  
+  mapArray = new Array(3)
+
+  mapArray [0][0] = "You are in the main lobby";
+  mapArray [0][1] = "You have reached the front desk";
+  mapArray [0][2] = "You have found the elevator";
+  mapArray [1][0] = "You are on the first floor";
+  mapArray [1][1] = "The pool is located here";
+  mapArray [1][2] = "The gym is on this floor";
+  mapArray [2][0] = "This is guest room 200";
+  mapArray [2][1] = "This is guest room 201";
+  mapArray [2][2] = "You have reached your room";
+
+  document.getElementById("mapOutput").innerHTML = "Welcome to our Spa";
+  for(i = 0; i <= 3; i++){
+
+   for(j = 0; j <= 3; j++){
+     
+     document.getElementById("mapOutput").innerHTML = mapArray[i][j];
+   }
+ }
+    
+  
+}
+
+  
+
+
 /*  For loop with Break
     var haystack = new Array()
     haystack[17] = "Needle";
