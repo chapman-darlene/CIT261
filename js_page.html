@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Testing File for CIT261</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style_small.css" />
+    <link rel="stylesheet" href="css/style_med.css" />
+    <link rel="stylesheet" href="css/style_large.css" />
+</head>
+
+<nav>
+    <hr />
+    <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="htmlFile.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="js_page.html">JavaScript</a></li>
+        <li><a href="dom.html">DOM</a></li>
+        <li><a href="json.html">JSON</a></li>
+        <li><a href="ajax.html">AJAX</a></li>
+    </ul>
+</nav>
+<header class="heading">
+    <h1>JavaScript Demo:</h1>
+</header>
+
+<body>
+
+    <div>
+        <h2>Variables</h2>
+        <p>To understand JavaScript, we need to understand how JavaScript stores information. The simplest way is through creating variables. A variable in JavaScript is easily created by placing the keyword \"var\" in front of a unique name, known as an
+            identifier. For example: var text = \"This is some text\". Variables must follow simple rules, such as:</p>
+        <ul>
+            <li>Variables may include letters (a-z, A-Z) or numbers (0-9). It only allows the symbols $ (dollar sign) and _ (underscore)</li>
+            <li>No other characters, spaces or punctuation is allowed.</li>
+            <li>The first character can only be a letter, the $ sign or _</li>
+            <li>Names are case-sensitive. For instance: Text, text and TEXT are not the same identifiers.</li>
+            <li>There are no set limits on variable names, but they should reflect the item to be defined.</li>
+            <li>Camel-case variable names are strongly suggested in defining a variable name, such as: var = firstName.</li>
+        </ul>
+        <br>
+        <p>Click the button to see examples of variable naming conventions</p>
+        <button onclick="variableExample()">Click Here</button>
+        <br>
+        <p id="varExample"></p>
+        <hr>
+    </div>
+
+    <div>
+        <h2>Loops</h2>
+        <p>There are several types of loops. We'll look at a few with some test code.</p>
+        <h3>While Loop</h3>
+        <p>The while loop code looks something like this: </p><br>
+        <ul class="codeExample">
+            <li>var text;</li>
+            <li>var count = 0;</li>
+            <li>while(count < 10) {</li>
+                    <li class="indentOne">text += "&ltbr&gt The number is: " + count;</li>
+                    <li class="indentOne">count++;</li>
+                    <li class="indentOne">}</li>
+        </ul>
+
+
+        <p>To see the a while loop in action, click on the button</p>
+        <button onclick="whileLoop()">Click Here</button>
+        <p id="whileLoop"></p>
+
+        <h3>Do-While Loops</h3>
+        <p>Do-while loops are similar to loops, except it will iterate once through the code before any test is made. The code will look similar to this:</p>
+        <ul class="codeExample">
+            <li> var text = "";</li>
+            <li> var count = 1;</li>
+            <li class="indentOne">do{</li>
+            <li class="indentTwo">text += (count + " times 7 is " + count * 7 + "&ltbr&gt")</li>
+            <li class="indentOne">}while (++count <= 10);</li>
+
+        </ul>
+
+        <p>To see how a do-while loop works, click on the button</p>
+        <button onclick="doWhileLoop()">Click Here</button>
+        <p id="doWhileLoop"></p>
+
+        <p>Loops are helpful, but perhaps the most useful loop is the For Loop. The For Loop accepts three parameters for each statement. This construction is especially helpful when working with an array. See below for information regarding For Loops and
+            <a href="#ArrayDemo">arrays</a>.
+
+            <hr>
+    </div>
+    <br>
+
+    <div>
+        <h2>Conditional Statements</h2>
+        <p>Conditional statements alter the program's flow. It provides the programmer to ask questions and receive responses, sometimes with input from the user. There are three types of of non-looping conditionals: the if statement, the switch statement and the ? operator.</p>
+        <h3>The If Statement:</h3>
+        <ul class="codeExample">
+            <li>var a = 100;</li>
+            <li>var b = 10;</li>
+            <li>if(a === b){</li>
+            <li>document.write("a is equal to b");</li>
+        </ul>
+
+        <h3>The If...Else Statement</h3>
+        <p>We can add an else statement to this code that allows for an alternative response</p>
+        <ul class="codeExample">
+            <li>var a = 100;</li>
+            <li>var b = 10;</li>
+            <li>if(a === b){</li>
+            <li>document.write("a is equal to b");</li>
+            <li>else {</li>
+            <li>document.write("a is not equal to be")</li>
+            <li>}</li>
+        </ul>
+
+        <h3>The ? Operator</h3>
+        <p>We can simplify the ternary operation by using the question mark (?) and the colon (:) symbols: where the ? is equivalent to the if statement, and the colon is the else statement.</p>
+        <ul class="codeExample">
+            <li>size = a <=5 ? "short" : "long";</li>
+        </ul>
+
+        
+        <h3>Find the Needle in the Haystack</h3>
+        <p>Here is a fun little game using conditional statements.<br>
+            Choose a number between 1 and 10</p>
+        <input id="haystack" type="number" name="haystack" min='1' max='10'>
+        <button type="button" onclick="haystackGame()">Submit</button>
+        <p id="haystackResponse"></p>
+
+        <h3>The Switch Statement</h3>
+        <p>Another conditional statement is called the switch. It compares one variable to certain to multiple case values. If the case is true, its code is executed. For example:</p>
+        
+            <fieldset>
+                <legend>Select your favorite Super Hero?</legend>
+                <label><input type="radio" id="superman" name="hero" value="superman">Superman</label>
+                <br>
+                <label><input type="radio" id="batman" name="hero" value="batman">Batman</label>
+                <br>
+                <label><input type="radio" id="wonderWoman" name="hero" value="wonderWoman">Wonder Woman</label>
+                <br>
+                <label><input type="radio" id="ironMan" name="hero" value="ironMan" >Iron Man</label>
+                <br>
+                <label><input type="radio" id="captain" name="hero" value="captain">Captain America</label>
+                <br>
+                <label><input type="radio" id="spiderMan" name="hero" value="spiderMan">Spider Man</label>
+                <br>
+                <br>
+                <button onclick="superHero()">Click Here</button>
+                <p id="comics"></p>
+            </fieldset>
+    </div>
+
+    <div>
+        <h2>Functions</h2>
+        <p>The primary purpose of JavaScript is to provide dynamic content to a website. This is made possible primarily through the use of functions. JavaScript is a C-based program, high-level programming language, so it is relatively easy to learn in comparison to many lower-level languages. Understanding how to create simple to complex functions is an essential skill for any JavaScript programmer.<br>
+        Functions are used to separate and organize code into smaller, reusable blocks. A simple function is created as follows: </p>
+        <ul class="codeExample">
+            <li>&ltscript&gt</li>
+            <li class="indentOne">function sample(a, b) { </li>
+            <li class="indentTwo">return a*b</li>
+            <li class="indentOne">}</li>
+            <li>&lt/script&gt</li>
+        </ul>
+        <p>This function passes two parameters (a and b). It then acts upon the variables by multiplying the variables and returning the result. Here is a little game to understand how functions work:</p>
+        <h3>The Craps Game</h3>
+        <p>Here are the rules:</p>
+        <ol>
+            <li>Roll a 7 or an 11 and you automatically win</li>
+            <li>Roll a 2, 3 or 12 and you automatically lose.</li>
+            <li>Roll 4, 5, 6, or 10 and you will need to roll that again before a 7 or 11, or you lose.</li>            
+        </ol>
+        <p>Click on the dice to see if you win. Good luck!</p>
+        <input type="image" src="img/dice.png" onclick="dice()">
+
+
+
+    </div>
+
+
+
+    <div>
+        <h2>Parameters</h2>
+    </div>
+
+
+    <div>
+        <h2 id="ArrayDemo">Arrays</h2>
+    </div>
+
+
+
+    <div>
+        <h2>Associative Arrays</h2>
+    </div>
+
+
+
+    <footer></footer>
+</body>
+
+</html>
+
+<!-- <form id="pkgPriceForm ">
+    <fieldset id="pkg-group ">
+        <legend id="pkg-legend ">Choose your package options:</legend>
+        <label><input type="checkbox " value="7000 " name="choice "  id="pkgSeven " />Seven night stay: $7,000</label><br>
+        <label><input type="checkbox " value="5000 " name="choice " id="pkgFive " />Five night stay: $5,000</label><br>
+        <label><input type="checkbox " value="550 " name="choice " id="pkgSpa " />Add a complete spa package: $550</label><br>
+        <label><input type="checkbox " value="500 " name="choice " id="pkgNutrition " />Add a nutritionist consultation: $500</label><br>
+        <label><input type="checkbox " value="2500 " name="choice " id="pkgAir " />Add round trip first-class airline ticket to resort: $2,500</label><br>
+        <label><input type="submit " id="pkgTotal "/></label><br>
+        <p id="totalPrice "></p>
+    </fieldset>
+</form> -->
