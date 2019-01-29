@@ -276,16 +276,22 @@ and open the template in the editor.
         </ul>
 
         <p>Let's see what that looks like in action:<br>
-            What is your favorite sport, from the following choices:</p>
-            <ul class="ul-none">
-                <li><input type="radio" id="golf" value="golf" name="sport">Golf</li>
-                <li><input type ="radio" id="tennis" value="tennis" name="sport">Tennis</li>
-                <li><input type ="radio" id="basketball" value="basketball" name="sport">Basketball</li>
-                <li><input type ="radio" id="football" value="football" name="sport">Football</li>
-                <li class="indentOne"><button onclick="assocArray()">Submit</button></li>
-            </ul>
-        <p id="assocArray"></p>
-
+           <!--  What is your favorite sport, from the following choices:</p> -->
+            <p>See a list of sports</p>
+            <fieldset>
+                <label><input type="radio" id="golf" value="golf" name="sport">Golf</label><br>
+                <label><input type ="radio" id="tennis" value="tennis" name="sport">Tennis</label><br>
+                <label><input type ="radio" id="basketball" value="basketball" name="sport">Basketball</label><br>
+                <label><input type ="radio" id="football" value="football" name="sport">Football</label><br><br>
+                <button onclick="assocArray()">Submit</button>
+                <p id="assocArray"></p>
+            </fieldset>
+            <!-- <fieldset>
+                <button onclick="assocArray()">Submit</button>
+                <p id="assocArray"></p>
+            </fieldset> -->
+          
+        
 
         <p>We will demonstrate how a JavaScript associative arrays work by examining more closely <a href="objects.html">JavaScript objects.</a></p>
         

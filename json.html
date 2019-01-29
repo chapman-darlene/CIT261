@@ -31,6 +31,28 @@ editor: DChapman
 </header>
 
 <body>
+    <h2>JSON Parse</h2>
+    <p>"JSON or JavaScript Object Notation is a very popular data interchange format. It was developed by Douglas Crockford. JSON is  text-based, lightweight, and human-readable format for data exchange between clients and servers. ('JavaScript and JSON Essentials, Sai Srinivas Sriparasa, p.64')"<br>
+    An example of a JSON object can be seen below:</p>
+    <h3>Choose your favorite classical book</h3>
+    <select id="bookSelection" onchange="selection()">
+        <option value="Classical Titles" selected>Classical Titles</option>
+        <option value="9781420922530">Hamlet</option>
+        <option value="9780199535569">Pride and Prejudice</option>
+        <option value="9780141321103">The Adventures of Tom Sawyer</option>
+        <option value="9781853260391">A Tale of Two Cities</option>
+        <option value="9781853260193">Vanity Fair</option>
+    </select>    
+    <p id="json_parse"></p>
+    <hr>
+
+    
+    <br>
+    <h2>JSON Stringify</h2>
+    <p></p>
+    <button onclick="json_stringify()">Stringify</button>
+    <p id="json_stringify"></p>
+
 
 </body>
 <footer>
