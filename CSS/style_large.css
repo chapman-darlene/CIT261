@@ -117,6 +117,7 @@ li {
 
 .codeExample li {
     list-style: none;
+    
 }
 
 .codeExample {
@@ -125,4 +126,22 @@ li {
     border-width: .15em;
     padding-top: .5em;
     padding-bottom: .5em;
+}
+
+.ul-none {
+    list-style: none;
+}
+
+.button {
+    font-size: 1.25em;
+    background-color: #3a6b96;
+    color: #f0f0f0;
+    padding: .5em;
+    text-align: center;
+    width: 5em;
+}
+
+.arrayContainer {
+    display: flex;
+    flex-direction: "row";
 }
