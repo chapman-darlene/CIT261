@@ -16,6 +16,7 @@ and open the template in the editor.
   #fbbc3c -- yellow
   #d88960 -- rust
   #ffffff -- white
+  #64704C -- green
 */
 
 @font-face {
@@ -23,16 +24,24 @@ and open the template in the editor.
     src: url('../fonts/Lato-Regular.ttf');
     font-family: "Lato-light";
     src: url('../fonts/Lato-Light.ttf');
+    font-family: "Grunge";
+    src: url('../fonts/BADGRUNGE.ttf');
+    font-family: "Army";
+    src: url('../fonts/ArmyWide.ttf');
 }
 
 html {
     width: 100%;
+    background-image: url("../img/camo_wallpaper.jpg");
 }
 
 body {
     background-color: white;
     margin: 2em;
-    padding: 1em;
+    padding-left: 2.5em;
+    padding-top: 1.5em;
+    padding-right: 2.5em;
+    padding-bottom: 3em;
 }
 
 .navigation {
@@ -49,7 +58,7 @@ body {
 header {
     margin: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     height: auto;
     padding: 0em;
 }
@@ -78,8 +87,10 @@ a:active {
 }
 
 h1 {
-    color: #D5797A;
-    font-size: 3.5em;
+    color: #64704C;
+    font-family: 'Army';
+    font-size: 4em;
+    font-stretch: semi-expanded;
 }
 
 h2 {

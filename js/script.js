@@ -215,7 +215,7 @@ function selection(){
         if("ISBN" == String(property)){
           document.getElementById("json_parse").innerHTML += "<hr>";
         }
-        document.getElementById("json_parse").style.color = "blue";
+        document.getElementById("json_parse").style.color = "#808080";
         document.getElementById("json_parse").innerHTML += property + ":  " + object[property] + "<br>";       
       }
     }
