@@ -190,14 +190,14 @@ var books = [
   Rating: "4 stars"},
 
   {ISBN: "9781853260391",
-  Title:"A Tale of Two Cities", 
-  Author:"Charles Dickens", 
-  Description:"'Liberty, equality, fraternity, or death; -- the last much the easiest to bestow, O Guilotine!' After eighteen years as a political prisoner in the Bastille, the ageing Doctor Manette is finally released and reunited with this daughter in England. From the tranquil roads of London, they are drawn against their will to the vengeful, bloodstained streets of Paris.",
+  Title: "A Tale of Two Cities", 
+  Author: "Charles Dickens", 
+  Description: "'Liberty, equality, fraternity, or death; -- the last much the easiest to bestow, O Guilotine!' After eighteen years as a political prisoner in the Bastille, the ageing Doctor Manette is finally released and reunited with this daughter in England. From the tranquil roads of London, they are drawn against their will to the vengeful, bloodstained streets of Paris.",
   Published: "1859",
   Rating: "4 stars"},
 
   {ISBN: "9781853260193",
-  Title:"Vanity Fair", 
+  Title: "Vanity Fair", 
   Author:"William Makepeace Thackeray", 
   Description:"A novel that chronicles the lives of two women who could not be more different: Becky Sharp, an orphan whose only resources are her vast ambitions, her native wit, and her loose morals; and her schoolmate, Amelia Sedley, a typically naive Victorian heroine, the pampered daughter of a wealthy family",
   Published: "1859",
@@ -214,12 +214,22 @@ function selection(){
       if(object.ISBN == input){
         if("ISBN" == String(property)){
           document.getElementById("json_parse").innerHTML += "<hr>";
-        }        
-        document.getElementById("json_parse").innerHTML += property + ": " + object[property] + "<br>";       
+        }
+        document.getElementById("json_parse").style.color = "blue";
+        document.getElementById("json_parse").innerHTML += property + ":  " + object[property] + "<br>";       
       }
     }
   }
 }
+
+var autos = [
+  {style: "hybrid", name: "Toyota Prius c", model: "LE", year: "2019", basePrice: "$22,955"},
+  {style: "hybrid", name: "Honda Insight Touring", model: "E-CVT", year: "2019", basePrice: "$28,190"},
+  {style: "hybrid", name: "Chevy Malibu", model: "FWD Hybrid", year: "2019", basePrice: "$28,590"},
+  {style: "hybrid", name: "Subaru Crosstrek", model: "hybrid", year: "2019", basePrice: "$38,470"}
+];
+
+document.getElementById("autos").innerHTML = JSON.stringify(autos);
 
 function json_stringify(){
   document.getElementById("json_stringify").innerHTML = JSON.stringify(books);
