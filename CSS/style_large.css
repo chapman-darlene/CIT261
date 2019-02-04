@@ -24,8 +24,8 @@ and open the template in the editor.
     src: url('../fonts/Lato-Regular.ttf');
     font-family: "Lato-light";
     src: url('../fonts/Lato-Light.ttf');
-    font-family: "Grunge";
-    src: url('../fonts/BADGRUNGE.ttf');
+    /* font-family: "Grunge";
+    src: url('../fonts/BADGRUNGE.ttf'); */
     font-family: "Army";
     src: url('../fonts/ArmyWide.ttf');
 }
@@ -128,7 +128,7 @@ li {
 
 .codeExample li {
     list-style: none;
-    
+
 }
 
 .codeExample {
@@ -143,13 +143,14 @@ li {
     list-style: none;
 }
 
+
 .button {
     font-size: 1.25em;
     background-color: #3a6b96;
     color: #f0f0f0;
     padding: .5em;
     text-align: center;
-    width: 5em;
+    width: 5.5em;
 }
 
 .arrayContainer {
