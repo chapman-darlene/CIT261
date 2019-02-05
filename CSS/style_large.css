@@ -157,3 +157,15 @@ li {
     display: flex;
     flex-direction: "row";
 }
+
+.flex-container {
+    margin-bottom: 2em;
+    display: flex;
+    justify-content:
+}
+
+.flex-item {
+    border: 1px solid #808080;
+    padding: 1em;
+    width: 100%;
+}
